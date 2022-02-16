@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center" style="text-align: center; margin-top: 2%;">
+        <div class="col-8">
+            <h3>Página de consulta de Rick and Morty</h3>
+            <p>Aqui é possível consultar Personagens, Locais e Epiśodios</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <carousel>
+                <slide *ngFor="let personagem of personagens">
+                    <img [src]="personagem.image" style="display: block; width: 100%;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3 style="color: white; background-color: rgba(0, 0, 0, 0.9);">{{ personagem.name }}</h3>
+                    </div>
+                </slide>
+                
+            </carousel>
+        </div>
+    </div>
+</div>
